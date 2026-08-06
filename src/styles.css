@@ -1,0 +1,156 @@
+:root {
+  color: #172235;
+  background: #f5f7fb;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  width: min(100% - 2rem, 48rem);
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+
+.intro,
+.next-step {
+  border: 1px solid #dce2ee;
+  border-radius: 1rem;
+  background: #fff;
+  padding: 2rem;
+  box-shadow: 0 0.75rem 2rem rgb(31 46 77 / 8%);
+}
+
+.next-step {
+  margin-top: 1.25rem;
+}
+
+.result-panel {
+  margin-top: 1.25rem;
+  border: 1px solid #dce2ee;
+  border-radius: 1rem;
+  background: #fff;
+  padding: 2rem;
+  box-shadow: 0 0.75rem 2rem rgb(31 46 77 / 8%);
+}
+
+.result-panel--error {
+  border-color: #e8b4b4;
+  background: #fff8f8;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: #3758a6;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  margin: 0;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(2rem, 7vw, 3.5rem);
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+.summary,
+.next-step p,
+.result-panel p {
+  margin-bottom: 0;
+  color: #4b5870;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.file-picker {
+  display: inline-flex;
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  background: #3758a6;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.file-picker:hover {
+  background: #2b4687;
+}
+
+.file-picker input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.sample-note {
+  font-size: 0.95rem !important;
+}
+
+code {
+  border-radius: 0.25rem;
+  background: #edf1f8;
+  padding: 0.1em 0.3em;
+  color: #283a61;
+}
+
+.findings-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.findings-list li {
+  border-left: 0.3rem solid #b53838;
+  border-radius: 0.25rem;
+  background: #fff5f5;
+  padding: 0.75rem 1rem;
+}
+
+.findings-list p {
+  margin: 0;
+}
+
+.finding-severity {
+  color: #8f2525 !important;
+  font-size: 0.8rem !important;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.success-message {
+  color: #216c46 !important;
+  font-weight: 700;
+}
+
+@media (max-width: 40rem) {
+  .app-shell {
+    padding: 2rem 0;
+  }
+
+  .intro,
+  .next-step {
+    padding: 1.5rem;
+  }
+}

@@ -1,4 +1,3 @@
-````markdown
 # Input Format
 
 ## Valid input
@@ -107,4 +106,3 @@ During bilingual analysis, string IDs are classified as:
 - Present in both files.
 - Present only in the English source file.
 - Present only in the German target file.
-````
