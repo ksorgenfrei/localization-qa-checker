@@ -49,6 +49,25 @@ to record the author's learning and decisions.
 - Codex ran the tests and production build, then manually checked both the
   finding and no-finding paths in the local application.
 
+### 2026-08-12 — Leading/trailing whitespace rule
+
+- We started a separate feature branch for the next small QA rule so `main`
+  remains stable while the work is developed.
+- Codex added a warning rule for leading or trailing spaces, tabs, and line
+  breaks around visible source text.
+- Whitespace-only values remain the responsibility of the existing error-level
+  empty-string rule, avoiding duplicate findings for the same issue.
+- The rule has focused automated tests and a sample JSON file for manual use.
+
+### 2026-08-12 — Future-work tracking
+
+- The author requested a separate notes file for ideas that should be discussed
+  without expanding the current milestone.
+- `FUTURE_WORK.md` was added with a proposed editable-findings and corrected
+  JSON-export feature.
+- We agreed to use `*futurework` in future prompts when an idea should be
+  considered for addition to that file after feasibility discussion.
+
 ## Notes for reviewers
 
 AI was used as a collaborative development tool, not as an unreviewed code
