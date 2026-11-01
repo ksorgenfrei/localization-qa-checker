@@ -21,6 +21,17 @@ English–German comparison is planned but is not implemented yet. See the
 [rule catalog](docs/rule-catalog.md) for the complete planned rule set and
 implementation status.
 
+## Example
+
+The checker reports multiple source-language issues with severity-specific
+colors:
+
+![Multiple source-language QA findings](docs/images/multi-issue-results.png)
+
+A valid file produces a clean result:
+
+![Clean source-file result](docs/images/clean-file-results.png)
+
 ## Run locally
 
 This project uses Node.js 24. From the repository directory:
