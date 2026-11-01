@@ -7,7 +7,7 @@ Localization teams often receive large files containing hundreds or thousands of
 
 Proposed solution
 
-A browser-based QA checker that analyses:
+A browser-based QA checker that analyzes:
 
 1. an English source JSON file or
 2. paired English and German JSON files.
