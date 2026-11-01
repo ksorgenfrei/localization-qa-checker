@@ -12,6 +12,9 @@ to record the author's learning and decisions.
   milestones, explain technical choices, draft code, and suggest tests.
 - The author reviews the proposed work, asks questions, and decides what to
   keep, change, or publish.
+- Every implementation cycle includes updating the relevant project
+  documentation and sample data so the written project state stays aligned
+  with the code.
 - AI-generated code and documentation are tested and reviewed before being
   committed.
 
