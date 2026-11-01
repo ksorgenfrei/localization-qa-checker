@@ -112,6 +112,8 @@ to record the author's learning and decisions.
   together by `analyseSourceFile`.
 - We added a multi-issue JSON sample so the same combined analysis can be tested
   manually through the upload interface.
+- The multi-issue sample also includes a mixed-style ellipsis entry so it covers
+  the overlap behavior demonstrated by the ellipsis rule.
 - We made finding colors depend on severity: errors use red, warnings use
   yellow/orange, and informational findings use blue.
 - We added a regression test documenting that an entry containing both ellipsis
