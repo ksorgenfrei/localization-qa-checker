@@ -20,7 +20,7 @@ to record the author's learning and decisions.
 ### 2026-08-05 — Project orientation and MVP planning
 
 - Codex reviewed the existing project brief, input-format specification,
-  architecture notes, and QA-rule catalogue.
+  architecture notes, and QA-rule catalog.
 - Codex proposed a deliberately small first vertical slice: validate one
   English JSON file, detect empty source strings, and show the findings in a
   simple React interface.
@@ -76,10 +76,19 @@ to record the author's learning and decisions.
   consecutive ordinary spaces in visible source text.
 - The rule excludes whitespace-only values so the existing empty-string rule
   remains the single finding for that case.
-- During review, the author noticed that the rule catalogue could be mistaken
-  for a list of already implemented features. The catalogue was updated with
+- During review, the author noticed that the rule catalog could be mistaken
+  for a list of already implemented features. The catalog was updated with
   an explicit implementation-status table distinguishing implemented and
   planned rules.
+
+### 2026-11-01 — Documentation cleanup
+
+- The author noticed duplication and ambiguity between the project brief,
+  architecture notes, input-format specification, and rule catalog.
+- Codex added a portfolio-facing README and clarified current versus planned
+  behavior in the architecture and input-format documents.
+- The detailed rule catalog, AI usage log, and future-work notes remain
+  separate because they serve different purposes.
 
 ## Notes for reviewers
 

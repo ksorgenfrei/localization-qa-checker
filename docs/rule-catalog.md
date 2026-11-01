@@ -1,4 +1,4 @@
-# Rule Catalogue
+# Rule Catalog
 
 This document defines the initial QA rules planned for the Localization QA
 Checker. It is both a product specification and an implementation reference;
@@ -15,7 +15,7 @@ Each rule has:
 * examples of valid and invalid content
 * documented limitations
 
-The rule catalogue may be refined as the application is implemented and tested.
+The rule catalog may be refined as the application is implemented and tested.
 
 ## Implementation status
 
@@ -35,7 +35,7 @@ The rule catalogue may be refined as the application is implemented and tested.
 | `localization-variable-mismatch` | Planned |
 | `localization-token-mismatch` | Planned |
 
-The application currently analyses one English source file. The bilingual rules
+The application currently analyzes one English source file. The bilingual rules
 will become available after paired English–German file analysis is implemented.
 
 # Source-language rules
@@ -207,7 +207,7 @@ will become available after paired English–German file analysis is implemented
 * **Default severity:** Warning
 * **Purpose:** Identify selected British English spellings when the project uses US English.
 * **Input required:** A valid English source entry containing non-empty text.
-* **Finding produced:** One finding for each entry containing a recognised British English spelling from the configured term list.
+* **Finding produced:** One finding for each entry containing a recognized British English spelling from the configured term list.
 * **Finding message:** `Possible British English spelling found: "{term}". Consider US English: "{replacement}".`
 
 ### Valid example
@@ -569,4 +569,4 @@ The MVP uses three severity levels:
 * **Warning:** A possible quality or consistency problem that requires human review.
 * **Information:** A low-risk observation that may help reviewers but does not necessarily require correction.
 
-The initial rule catalogue does not yet include information-level rules.
+The initial rule catalog does not yet include information-level rules.

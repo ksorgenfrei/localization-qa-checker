@@ -1,5 +1,11 @@
 # Input Format
 
+## Implementation status
+
+The current application supports one flat English source JSON file. The
+English–German examples and matching rules below document the planned bilingual
+format; paired-file analysis is not implemented yet.
+
 ## Valid input
 
 The application accepts localization files that meet the following requirements:
@@ -8,10 +14,11 @@ The application accepts localization files that meet the following requirements:
 - The top-level value is an object.
 - Each property name is a string ID.
 - Each property value is the displayed text.
-- Source and target files use matching string IDs.
+- Source and target files will use matching string IDs when bilingual analysis
+  is implemented.
 - Nested objects, arrays, numbers, booleans, and `null` values are not supported.
 - String IDs are case-sensitive.
-- Source and target files are uploaded separately.
+- Source files are uploaded separately today. Target-file upload is planned.
 
 ### English example
 
@@ -90,9 +97,9 @@ Similarly, the following value is structurally valid but may produce a whitespac
 }
 ```
 
-The parser determines whether a file can be analysed. The QA rule engine determines whether the accepted content contains quality problems.
+The parser determines whether a file can be analyzed. The QA rule engine determines whether the accepted content contains quality problems.
 
-## Matching source and target entries
+## Planned matching of source and target entries
 
 English and German entries are matched using their exact string IDs.
 

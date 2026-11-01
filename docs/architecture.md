@@ -1,5 +1,15 @@
 # Application Structure
 
+## Current implementation and planned design
+
+The current application supports one uploaded English source JSON file. It
+parses the file, runs the implemented source-language rules, and displays the
+findings in React.
+
+The sections below also describe planned bilingual analysis and future UI
+capabilities. Those parts are design direction, not claims that the current
+application already supports them.
+
 ## Purpose
 
 The application should keep the localization QA logic separate from the React interface.
@@ -17,14 +27,18 @@ This separation makes the QA logic easier to:
 
 ### React interface
 
-The React interface will:
+The React interface currently:
 
-- allow the user to select English and German JSON files
-- display file-validation errors
-- start the analysis
-- display a summary of the results
-- display individual QA findings
-- eventually allow the user to filter and inspect findings
+- allows the user to select one English JSON file;
+- displays file-validation errors;
+- starts the analysis;
+- displays a summary of the results;
+- displays individual QA findings.
+
+Planned interface capabilities include:
+
+- selecting paired English and German JSON files;
+- filtering and inspecting findings in more detail.
 
 The React components should not contain the implementation of individual QA rules.
 
@@ -103,7 +117,9 @@ When the user selects an English JSON file, the browser reads the file and passe
 
 ### English–German analysis
 
-When the user selects both English and German JSON files, the application reads and validates each file. It matches entries using their string IDs, compares the source and target text, and runs the localization rules. React then displays the findings.
+When implemented, bilingual analysis will read and validate English and German
+files, match entries using their string IDs, compare source and target text, and
+run the localization rules. React will then display the findings.
 
 ## Initial source-code structure
 
@@ -149,9 +165,9 @@ Contains reusable interface components that are not tied to one feature.
 
 This structure will be adjusted as the project develops. The first version should avoid unnecessary folders or abstractions.
 
-## First working feature
+## First working feature (completed)
 
-The first implementation will create one complete path through the application.
+The first implementation created one complete path through the application.
 
 The user will be able to:
 
@@ -162,17 +178,19 @@ The user will be able to:
 5. have valid entries checked for empty source strings
 6. see any resulting QA findings in the interface
 
-The first working feature will support only:
+The first working feature supports:
 
 - one English source file
 - the flat JSON format defined in `input-format.md`
-- the `source-empty-string` rule
+- the `source-empty-string` rule;
+- the `source-leading-trailing-whitespace` rule;
+- the `source-repeated-whitespace` rule;
 - a basic results display
 
-It will not yet include:
+The current application does not yet include:
 
 - German target files
-- additional QA rules
+- the remaining additional QA rules
 - filtering
 - advanced styling
 - result export
