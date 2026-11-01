@@ -68,6 +68,19 @@ to record the author's learning and decisions.
 - We agreed to use `*futurework` in future prompts when an idea should be
   considered for addition to that file after feasibility discussion.
 
+### 2026-11-01 — Repeated-whitespace rule
+
+- The author returned to the project and created a separate feature branch for
+  the next source-language QA rule.
+- Codex added `source-repeated-whitespace`, a warning for two or more
+  consecutive ordinary spaces in visible source text.
+- The rule excludes whitespace-only values so the existing empty-string rule
+  remains the single finding for that case.
+- During review, the author noticed that the rule catalogue could be mistaken
+  for a list of already implemented features. The catalogue was updated with
+  an explicit implementation-status table distinguishing implemented and
+  planned rules.
+
 ## Notes for reviewers
 
 AI was used as a collaborative development tool, not as an unreviewed code
