@@ -105,6 +105,8 @@ to record the author's learning and decisions.
 - We clarified the ellipsis details so each style labels its displayed string IDs
   as examples; the total count remains in the parent bullet without a redundant
   "more entries" child.
+- We updated the upload instructions and sample-file note so the interface
+  describes all currently implemented source-file checks.
 
 ## Notes for reviewers
 
