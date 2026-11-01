@@ -212,6 +212,9 @@ The first feature should include automated tests for the JSON parser and the emp
 - whitespace-only strings produce a finding
 - non-empty strings do not produce a finding
 
+The source-analysis integration test verifies that the analyzer runs all
+registered QA rules together, not only that each rule works in isolation.
+
 Interface testing can be added after the parser and QA rule work correctly.
 
 ## Important design decisions

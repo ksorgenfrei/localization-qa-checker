@@ -107,6 +107,11 @@ to record the author's learning and decisions.
   "more entries" child.
 - We updated the upload instructions and sample-file note so the interface
   describes all currently implemented source-file checks.
+- We added an analyzer integration test using one file with several different
+  issues. Its purpose is to verify that the registered rules are actually run
+  together by `analyseSourceFile`.
+- We added a multi-issue JSON sample so the same combined analysis can be tested
+  manually through the upload interface.
 
 ## Notes for reviewers
 
