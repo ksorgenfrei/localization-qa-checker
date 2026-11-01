@@ -112,6 +112,8 @@ to record the author's learning and decisions.
   together by `analyseSourceFile`.
 - We added a multi-issue JSON sample so the same combined analysis can be tested
   manually through the upload interface.
+- We made finding colors depend on severity: errors use red, warnings use
+  yellow/orange, and informational findings use blue.
 
 ## Notes for reviewers
 

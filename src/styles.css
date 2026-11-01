@@ -121,10 +121,24 @@ code {
 }
 
 .findings-list > li {
-  border-left: 0.3rem solid #b53838;
+  border-left: 0.3rem solid transparent;
   border-radius: 0.25rem;
-  background: #fff5f5;
   padding: 0.75rem 1rem;
+}
+
+.findings-list > li.finding-card--error {
+  border-left: 0.3rem solid #b53838;
+  background: #fff5f5;
+}
+
+.findings-list > li.finding-card--warning {
+  border-left: 0.3rem solid #c17a16;
+  background: #fff8e8;
+}
+
+.findings-list > li.finding-card--information {
+  border-left: 0.3rem solid #3758a6;
+  background: #eef3ff;
 }
 
 .findings-list p {
@@ -169,11 +183,22 @@ code {
 }
 
 .finding-severity {
-  color: #8f2525 !important;
   font-size: 0.8rem !important;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+.finding-card--error .finding-severity {
+  color: #8f2525 !important;
+}
+
+.finding-card--warning .finding-severity {
+  color: #9a5d00 !important;
+}
+
+.finding-card--information .finding-severity {
+  color: #2f4e91 !important;
 }
 
 .success-message {

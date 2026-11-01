@@ -100,7 +100,10 @@ function App() {
           ) : (
             <ul className="findings-list">
               {analysisState.findings.map((finding) => (
-                <li key={`${finding.ruleId}-${finding.stringId ?? finding.scope}`}>
+                <li
+                  key={`${finding.ruleId}-${finding.stringId ?? finding.scope}`}
+                  className={`finding-card finding-card--${finding.severity}`}
+                >
                   <p className="finding-severity">{finding.severity}</p>
                   <p>
                     <code>{finding.scope === 'file' ? 'Entire source file' : finding.stringId}</code>:{' '}
