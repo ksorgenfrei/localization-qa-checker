@@ -105,6 +105,26 @@ to record the author's learning and decisions.
 - We clarified the ellipsis details so each style labels its displayed string IDs
   as examples; the total count remains in the parent bullet without a redundant
   "more entries" child.
+- We updated the upload instructions and sample-file note so the interface
+  describes all currently implemented source-file checks.
+- We added an analyzer integration test using one file with several different
+  issues. Its purpose is to verify that the registered rules are actually run
+  together by `analyseSourceFile`.
+- We added a multi-issue JSON sample so the same combined analysis can be tested
+  manually through the upload interface.
+- The multi-issue sample also includes a mixed-style ellipsis entry so it covers
+  the overlap behavior demonstrated by the ellipsis rule.
+- We made finding colors depend on severity: errors use red, warnings use
+  yellow/orange, and informational findings use blue.
+- We added a regression test documenting that an entry containing both ellipsis
+  forms appears in both style groups because it uses both forms.
+- We updated the inconsistent-ellipsis sample with a mixed-form entry so this
+  behavior can also be checked manually in the application.
+- We made the ellipsis result more concise by showing one representative
+  example per style and adding a separate count and example for entries that use
+  both styles.
+- We refined example selection to prefer style-exclusive entries, while using a
+  mixed-style entry as a fallback when no exclusive example exists.
 
 ## Notes for reviewers
 

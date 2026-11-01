@@ -1,0 +1,9 @@
+{
+  "menu.play": "",
+  "menu.settings": "   ",
+  "dialogue.welcome": " Welcome back, player.",
+  "dialogue.goodbye": "See you  soon.",
+  "status.mixed": "Wait... really…",
+  "status.loading": "Loading...",
+  "status.connecting": "Connecting…"
+}

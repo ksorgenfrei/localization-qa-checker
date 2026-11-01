@@ -46,6 +46,8 @@ Sample inputs are in [`public/samples`](public/samples):
 - `english-with-whitespace-issues.json` demonstrates edge-whitespace findings;
 - `english-with-repeated-whitespace.json` demonstrates repeated-space findings;
 - `english-with-inconsistent-ellipsis.json` demonstrates a file-level finding;
+- `english-with-multiple-source-issues.json` demonstrates several source rules
+  running together;
 - `english-invalid-value.json` demonstrates a structural validation error.
 
 ## Documentation

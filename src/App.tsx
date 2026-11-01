@@ -57,8 +57,9 @@ function App() {
       <section className="next-step" aria-labelledby="upload-title">
         <h2 id="upload-title">Check an English source file</h2>
         <p>
-          Upload a flat JSON file with string IDs and English text values. This
-          first check finds entries that are empty or contain only whitespace.
+          Upload a flat JSON file with string IDs and English text values. The
+          checker looks for empty strings, whitespace problems, and inconsistent
+          ellipsis styles.
         </p>
         <label className="file-picker" htmlFor="source-file">
           <span>Select an English JSON file</span>
@@ -73,8 +74,9 @@ function App() {
           />
         </label>
         <p className="sample-note">
-          Try <code>public/samples/english-with-empty-strings.json</code> to
-          see two findings.
+          Try <code>public/samples/english-with-empty-strings.json</code> or{' '}
+          <code>public/samples/english-with-inconsistent-ellipsis.json</code> to
+          see the checker in action.
         </p>
       </section>
 
@@ -98,7 +100,10 @@ function App() {
           ) : (
             <ul className="findings-list">
               {analysisState.findings.map((finding) => (
-                <li key={`${finding.ruleId}-${finding.stringId ?? finding.scope}`}>
+                <li
+                  key={`${finding.ruleId}-${finding.stringId ?? finding.scope}`}
+                  className={`finding-card finding-card--${finding.severity}`}
+                >
                   <p className="finding-severity">{finding.severity}</p>
                   <p>
                     <code>{finding.scope === 'file' ? 'Entire source file' : finding.stringId}</code>:{' '}
