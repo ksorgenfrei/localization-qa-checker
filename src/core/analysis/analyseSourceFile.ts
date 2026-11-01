@@ -3,11 +3,13 @@ import type { QaFinding } from '../models/qa'
 import { findLeadingTrailingWhitespace } from '../rules/sourceLeadingTrailingWhitespace'
 import { findEmptySourceStrings } from '../rules/sourceEmptyString'
 import { findRepeatedWhitespace } from '../rules/sourceRepeatedWhitespace'
+import { findInconsistentEllipsis } from '../rules/sourceInconsistentEllipsis'
 
 export function analyseSourceFile(file: LocalizationFile): QaFinding[] {
   return [
     ...findEmptySourceStrings(file),
     ...findLeadingTrailingWhitespace(file),
     ...findRepeatedWhitespace(file),
+    ...findInconsistentEllipsis(file),
   ]
 }

@@ -9,6 +9,7 @@ export function findEmptySourceStrings(file: LocalizationFile): QaFinding[] {
     .map(([stringId]) => ({
       ruleId: sourceEmptyStringRuleId,
       severity: 'error',
+      scope: 'entry' as const,
       stringId,
       message: 'Source string is empty.',
     }))

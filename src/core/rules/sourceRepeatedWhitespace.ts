@@ -10,6 +10,7 @@ export function findRepeatedWhitespace(file: LocalizationFile): QaFinding[] {
     .map(([stringId]) => ({
       ruleId: sourceRepeatedWhitespaceRuleId,
       severity: 'warning',
+      scope: 'entry' as const,
       stringId,
       message: 'Source string contains repeated whitespace.',
     }))

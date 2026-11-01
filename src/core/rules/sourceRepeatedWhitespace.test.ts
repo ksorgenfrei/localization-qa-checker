@@ -13,12 +13,14 @@ describe('findRepeatedWhitespace', () => {
       {
         ruleId: 'source-repeated-whitespace',
         severity: 'warning',
+        scope: 'entry',
         stringId: 'dialogue.welcome',
         message: 'Source string contains repeated whitespace.',
       },
       {
         ruleId: 'source-repeated-whitespace',
         severity: 'warning',
+        scope: 'entry',
         stringId: 'menu.play',
         message: 'Source string contains repeated whitespace.',
       },

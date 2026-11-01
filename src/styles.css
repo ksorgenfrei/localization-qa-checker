@@ -120,7 +120,7 @@ code {
   list-style: none;
 }
 
-.findings-list li {
+.findings-list > li {
   border-left: 0.3rem solid #b53838;
   border-radius: 0.25rem;
   background: #fff5f5;
@@ -129,6 +129,43 @@ code {
 
 .findings-list p {
   margin: 0;
+}
+
+.finding-details {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+  color: #4b5870;
+  line-height: 1.6;
+}
+
+.finding-details li {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.finding-details li::marker {
+  color: #172235;
+  font-weight: 700;
+}
+
+.finding-details > li {
+  font-weight: 700;
+}
+
+.finding-detail-children {
+  margin: 0.25rem 0 0.5rem;
+  padding-left: 1.25rem;
+  font-weight: 400;
+  list-style: circle;
+}
+
+.finding-detail-children li {
+  border: 0;
+  background: transparent;
+  padding: 0;
 }
 
 .finding-severity {

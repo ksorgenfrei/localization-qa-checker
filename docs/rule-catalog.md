@@ -25,7 +25,7 @@ The rule catalog may be refined as the application is implemented and tested.
 | `source-leading-trailing-whitespace` | Implemented |
 | `source-repeated-whitespace` | Implemented |
 | `source-unexpected-line-break` | Planned |
-| `source-inconsistent-ellipsis` | Planned |
+| `source-inconsistent-ellipsis` | Implemented |
 | `source-us-english-spelling` | Planned |
 | `target-missing-entry` | Planned |
 | `target-extra-entry` | Planned |
@@ -178,6 +178,7 @@ will become available after paired English–German file analysis is implemented
 * **Input required:** All valid entries in an English source file.
 * **Finding produced:** A finding when both `...` and `…` are used within the same source file.
 * **Finding message:** `Source file uses inconsistent ellipsis styles.`
+* **Finding scope:** File-level. The finding includes counts and up to three representative string IDs labeled as examples for each style rather than one finding per entry.
 
 ### Consistent example
 

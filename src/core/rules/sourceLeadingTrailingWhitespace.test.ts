@@ -14,18 +14,21 @@ describe('findLeadingTrailingWhitespace', () => {
       {
         ruleId: 'source-leading-trailing-whitespace',
         severity: 'warning',
+        scope: 'entry',
         stringId: 'menu.play',
         message: 'Source string contains leading or trailing whitespace.',
       },
       {
         ruleId: 'source-leading-trailing-whitespace',
         severity: 'warning',
+        scope: 'entry',
         stringId: 'menu.settings',
         message: 'Source string contains leading or trailing whitespace.',
       },
       {
         ruleId: 'source-leading-trailing-whitespace',
         severity: 'warning',
+        scope: 'entry',
         stringId: 'dialogue.welcome',
         message: 'Source string contains leading or trailing whitespace.',
       },
