@@ -80,7 +80,7 @@ function App() {
 
       {analysisState.status === 'error' && (
         <section className="result-panel result-panel--error" role="alert">
-          <h2>File could not be analysed</h2>
+          <h2>File could not be analyzed</h2>
           <p>{analysisState.message}</p>
         </section>
       )}
@@ -89,20 +89,37 @@ function App() {
         <section className="result-panel" aria-live="polite" aria-labelledby="results-title">
           <h2 id="results-title">Results</h2>
           <p>
-            Analysed <strong>{analysisState.fileName}</strong> with{' '}
+            Analyzed <strong>{analysisState.fileName}</strong> with{' '}
             {analysisState.entryCount} entries.
           </p>
 
           {analysisState.findings.length === 0 ? (
-            <p className="success-message">No empty source strings found.</p>
+            <p className="success-message">No source QA issues found.</p>
           ) : (
             <ul className="findings-list">
               {analysisState.findings.map((finding) => (
-                <li key={finding.stringId}>
+                <li key={`${finding.ruleId}-${finding.stringId ?? finding.scope}`}>
                   <p className="finding-severity">{finding.severity}</p>
                   <p>
-                    <code>{finding.stringId}</code>: {finding.message}
+                    <code>{finding.scope === 'file' ? 'Entire source file' : finding.stringId}</code>:{' '}
+                    {finding.message}
                   </p>
+                  {finding.details && (
+                    <ul className="finding-details">
+                      {finding.details.map((detail) => (
+                        <li key={detail.text}>
+                          {detail.text}
+                          {detail.children && (
+                            <ul className="finding-detail-children">
+                              {detail.children.map((child) => (
+                                <li key={child}>{child}</li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>

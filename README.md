@@ -11,7 +11,8 @@ The current version analyzes one flat English JSON file and reports:
 
 - empty or whitespace-only source strings (`source-empty-string`);
 - leading or trailing whitespace (`source-leading-trailing-whitespace`);
-- repeated spaces (`source-repeated-whitespace`).
+- repeated spaces (`source-repeated-whitespace`);
+- inconsistent ellipsis styles (`source-inconsistent-ellipsis`).
 
 The parser and QA rules are kept separate from the React interface, and the
 core logic has automated tests.
@@ -44,6 +45,7 @@ Sample inputs are in [`public/samples`](public/samples):
 - `english-with-empty-strings.json` demonstrates error findings;
 - `english-with-whitespace-issues.json` demonstrates edge-whitespace findings;
 - `english-with-repeated-whitespace.json` demonstrates repeated-space findings;
+- `english-with-inconsistent-ellipsis.json` demonstrates a file-level finding;
 - `english-invalid-value.json` demonstrates a structural validation error.
 
 ## Documentation

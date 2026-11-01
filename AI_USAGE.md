@@ -93,6 +93,19 @@ to record the author's learning and decisions.
 - The detailed rule catalog, AI usage log, and future-work notes remain
   separate because they serve different purposes.
 
+### 2026-11-01 — Inconsistent-ellipsis rule
+
+- The author requested a file-level rule that reports mixed use of `...` and
+  `…` without producing one finding for every affected entry.
+- Codex extended the QA finding model with `entry` and `file` scopes, updated
+  existing findings, and added the ellipsis rule with counts and representative
+  string IDs.
+- We refined the interface output so findings can include structured detail
+  bullets instead of one long message string.
+- We clarified the ellipsis details so each style labels its displayed string IDs
+  as examples; the total count remains in the parent bullet without a redundant
+  "more entries" child.
+
 ## Notes for reviewers
 
 AI was used as a collaborative development tool, not as an unreviewed code

@@ -13,6 +13,7 @@ export function findLeadingTrailingWhitespace(
     .map(([stringId]) => ({
       ruleId: sourceLeadingTrailingWhitespaceRuleId,
       severity: 'warning',
+      scope: 'entry' as const,
       stringId,
       message: 'Source string contains leading or trailing whitespace.',
     }))

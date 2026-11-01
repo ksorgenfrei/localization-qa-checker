@@ -13,12 +13,14 @@ describe('findEmptySourceStrings', () => {
       {
         ruleId: 'source-empty-string',
         severity: 'error',
+        scope: 'entry',
         stringId: 'menu.play',
         message: 'Source string is empty.',
       },
       {
         ruleId: 'source-empty-string',
         severity: 'error',
+        scope: 'entry',
         stringId: 'menu.settings',
         message: 'Source string is empty.',
       },

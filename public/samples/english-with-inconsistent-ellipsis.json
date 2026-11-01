@@ -1,0 +1,12 @@
+{
+  "status.loading": "Loading...",
+  "status.connecting": "Connecting…",
+  "status.retry": "Retry...",
+  "status.saving": "Saving...",
+  "status.waiting": "Waiting…",
+  "status.pausing": "Pausing…",
+  "status.continue": "Continuing...",
+  "status.complete": "Complete…",
+  "status.download": "Downloading...",
+  "status.upload": "Uploading..."
+}
