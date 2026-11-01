@@ -1,4 +1,5 @@
 {
+  "status.mixed": "Wait... really…",
   "status.loading": "Loading...",
   "status.connecting": "Connecting…",
   "status.retry": "Retry...",

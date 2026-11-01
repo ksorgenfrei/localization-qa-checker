@@ -114,6 +114,15 @@ to record the author's learning and decisions.
   manually through the upload interface.
 - We made finding colors depend on severity: errors use red, warnings use
   yellow/orange, and informational findings use blue.
+- We added a regression test documenting that an entry containing both ellipsis
+  forms appears in both style groups because it uses both forms.
+- We updated the inconsistent-ellipsis sample with a mixed-form entry so this
+  behavior can also be checked manually in the application.
+- We made the ellipsis result more concise by showing one representative
+  example per style and adding a separate count and example for entries that use
+  both styles.
+- We refined example selection to prefer style-exclusive entries, while using a
+  mixed-style entry as a fallback when no exclusive example exists.
 
 ## Notes for reviewers
 

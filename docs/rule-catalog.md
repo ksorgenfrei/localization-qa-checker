@@ -178,7 +178,10 @@ will become available after paired English–German file analysis is implemented
 * **Input required:** All valid entries in an English source file.
 * **Finding produced:** A finding when both `...` and `…` are used within the same source file.
 * **Finding message:** `Source file uses inconsistent ellipsis styles.`
-* **Finding scope:** File-level. The finding includes counts and up to three representative string IDs labeled as examples for each style rather than one finding per entry.
+* **Finding scope:** File-level. The finding includes counts and one representative string ID labeled as an example for each style, preferring entries that use only that style. If entries use both styles within the same value, it also reports the overlap count and one example. When no style-exclusive example exists, a mixed-style entry is used as the fallback.
+
+If one entry contains both ellipsis styles, that entry is included in both style
+groups because it uses both forms.
 
 ### Consistent example
 
