@@ -1,6 +1,9 @@
 # Rule Catalogue
 
-This document defines the initial QA rules supported by the Localization QA Checker.
+This document defines the initial QA rules planned for the Localization QA
+Checker. It is both a product specification and an implementation reference;
+the status table below distinguishes documented rules from rules currently
+available in the application.
 
 Each rule has:
 
@@ -13,6 +16,27 @@ Each rule has:
 * documented limitations
 
 The rule catalogue may be refined as the application is implemented and tested.
+
+## Implementation status
+
+| Rule | Status |
+| --- | --- |
+| `source-empty-string` | Implemented |
+| `source-leading-trailing-whitespace` | Implemented |
+| `source-repeated-whitespace` | Implemented |
+| `source-unexpected-line-break` | Planned |
+| `source-inconsistent-ellipsis` | Planned |
+| `source-us-english-spelling` | Planned |
+| `target-missing-entry` | Planned |
+| `target-extra-entry` | Planned |
+| `target-empty-string` | Planned |
+| `target-identical-to-source` | Planned |
+| `localization-placeholder-mismatch` | Planned |
+| `localization-variable-mismatch` | Planned |
+| `localization-token-mismatch` | Planned |
+
+The application currently analyses one English source file. The bilingual rules
+will become available after paired English–German file analysis is implemented.
 
 # Source-language rules
 
